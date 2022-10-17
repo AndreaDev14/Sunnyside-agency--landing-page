@@ -3,7 +3,8 @@
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![desktop-preview](https://user-images.githubusercontent.com/108431169/196285548-33bca66d-96ef-45c1-b941-1be00ac9dcc9.jpg)
+
 
 
 ### Link
@@ -25,8 +26,6 @@
 
 ## Author
 
-
-- Website - [https://andreadev14.github.io/stats-preview-card/](https://andreadev14.github.io/stats-preview-card/)
 - Frontend Mentor - [@AndreaDev14](https://www.frontendmentor.io/profile/AndreaDev14)
 
 
