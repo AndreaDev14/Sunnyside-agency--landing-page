@@ -1,0 +1,107 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.navbar {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__hamburguer {
+        cursor: pointer;
+    }
+    &__menu{
+        position: fixed;
+        top: -25rem;
+        left: 0;
+        right: 0;
+        width: 80%;
+        margin: 0 auto;
+        padding: 2em 1em;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        transition: 0.7s ease-out;
+
+        &::before{
+            content: "";
+            position: absolute;
+            
+            border-top: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-right: 10px solid #fff;
+            border-bottom: 10px solid #fff;
+            top: -2rem;
+            right: 0;
+        }
+    }
+    &__menu--active {
+    
+        top: 8rem;
+        transition: 0.7s ease;
+
+    }
+    &__link {
+        font-family: v.$fontOne;
+        color: v.$Dark-grayish-blue;
+       
+        @include m.desktop { 
+     
+            color: v.$White;
+        }
+    }
+
+    &__btn {
+        color: v.$Very-dark-desaturated-blue;
+        background-color: v.$Yellow;
+        padding: 1rem 1.5rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: v.$fontTwo;
+       
+    }
+   
+
+    @include m.desktop { 
+
+    &__hamburguer {
+        display: none;
+    }
+    &__menu{
+      flex-direction: row;
+        gap: 5rem;
+        position: unset;
+        top: unset;
+        width:unset;
+        margin: unset;
+        padding: .2rem .1rem;
+        background-color: unset;
+   
+    
+
+    }
+
+    &__btn {
+        color: v.$Very-dark-desaturated-blue;
+        background-color: v.$White;
+        padding: 1rem 1.5rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        opacity: 1;
+
+        &:hover {
+            color: v.$White;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+      
+       
+    }
+       
+    }
+  
+
+    
+}

@@ -1,0 +1,102 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+
+
+.services {
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, 25rem 40rem);
+
+        @include m.tablet { 
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2, 55rem);
+            grid-template-areas:
+            "text1 img1"
+            "img2 text2";
+        }
+    }
+    
+
+    &__img--one {
+        background-image: url(../img/mobile/image-transform.jpg);
+        background-size: cover;
+        background-position: center;
+
+        @include m.tablet  { 
+            background-image: url(../img/desktop/image-transform.jpg);
+            grid-area: img1;
+        }
+    }
+
+    &__text {
+        place-self: center;
+        padding:  1rem 2.5rem;
+        text-align: center;
+
+        @include m.tablet { 
+            text-align: start;
+            grid-area: text1;
+            padding: 5rem;
+            max-width: 55rem;
+        }
+    }
+
+    &__text--2 {
+        @include m.tablet { 
+            grid-area: text2;
+        }
+    }
+    &__title {
+       color: v.$Very-dark-desaturated-blue;
+       @include m.desktop { 
+        font-size: 4.2rem;
+       }
+    }
+    &__paragraph {
+        color: v.$Very-dark-grayish-blue;
+        line-height: 1.5;
+        position: relative;
+       
+    }
+
+    &__btn {
+   
+        @include m.btnStyle(v.$Yellow);  
+        @include m.tablet { 
+            display: block;
+            &::after {
+                width: 24%;  
+            }
+        }
+
+       
+
+       
+        
+    }
+
+    &__img--two {
+        background-image: url(../img/mobile/image-stand-out.jpg);
+        background-size: cover;
+        background-position: center;
+        @include m.tablet { 
+            background-image: url(../img/desktop/image-stand-out.jpg);
+            grid-area: img2;
+        }
+
+       
+    }
+    &__btn--two {
+   
+        @include m.btnStyle(v.$Soft-red);    
+        @include m.tablet { 
+            display: block;
+            &::after {
+                width: 24%;  
+            }
+        } 
+        
+    }
+}

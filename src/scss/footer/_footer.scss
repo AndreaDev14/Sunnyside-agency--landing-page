@@ -1,0 +1,52 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+
+
+.footer {
+    background-color:#90D4C5;
+    padding: 5rem 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap:5rem;
+        align-items: center;
+    }
+    &__logo {
+        margin-top: 2rem;
+        background-color: #90D4C5;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 5rem;
+    }
+
+    &__link {
+        font-family: v.$fontOne;
+     color: v.$Dark-moderate-cyan;
+
+     &:hover {
+        color: v.$White;
+     }
+    }
+
+    &__card {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem 0;
+
+       
+
+    }
+
+    &__icon {
+        color: v.$Dark-desaturated-cyan;
+
+        &:hover {
+            color: v.$White;
+        }
+    }
+
+}

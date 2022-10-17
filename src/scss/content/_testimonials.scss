@@ -1,0 +1,57 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+
+.testimonials {
+   text-align: center;
+
+   &__title {
+    text-transform: uppercase;
+    color: v.$Grayish-blue;
+    font-size: 1.7rem;
+    letter-spacing: .5rem;
+   margin: 5rem 0;
+   }
+
+   &__grid {
+    display: grid;
+    gap: 6rem;
+
+    @include m.tablet { 
+      grid-template-columns: repeat(3, 1fr);
+    }
+   }
+
+   &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+   }
+
+   &__img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+   }
+
+   &__paragraph {
+    line-height: 1.5;
+    color: v.$Very-dark-grayish-blue;
+   }
+
+   &__name {
+    margin: 0;
+    color: v.$Very-dark-desaturated-blue;
+    font-family: v.$fontTwo;
+
+   }
+   &__job {
+    margin: 1rem 0 0 0;
+    color: v.$Grayish-blue;
+    font-size: 1.5rem;
+    
+   }
+   
+}

@@ -1,0 +1,46 @@
+
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.header {
+  
+    background-image: url(../img/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center;
+
+    @include m.tablet { 
+        background-image: url(../img/desktop/image-header.jpg);
+    }
+
+&__info {
+    height: 40rem;
+    text-align: center;
+    padding-top: 6rem;
+    @include m.desktop { 
+        height: 60rem;
+        padding-top: 4rem;
+    }
+
+}
+ &__title {
+       
+        color: v.$White;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        font-family: v.$fontTwo;
+        font-weight: 900;
+        
+        @include m.desktop { 
+            font-size: 5.5rem;
+        }
+    
+    }
+
+    &__arrow {
+    margin: 0 auto;
+   
+      
+    }
+
+}

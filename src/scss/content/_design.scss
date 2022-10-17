@@ -1,0 +1,52 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+
+.design {
+    display: grid;
+    grid-auto-rows: 56rem;
+
+    @include m.tablet { 
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+
+    &__section {
+    display: grid;
+    align-content: end;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/mobile/image-graphic-design.jpg');
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: v.$Dark-desaturated-cyan;
+    @include m.tablet { 
+        background-image: url('../img/desktop/image-graphic-design.jpg');
+    }
+    }
+
+    &__section--two {
+        background-image: url('../img/mobile/image-photography.jpg');
+        color: v.$Dark-blue;
+@include m.tablet { 
+    background-image: url('../img/desktop/image-photography.jpg');
+}
+
+    }
+
+    &__paragraph {
+        line-height: 1.5;
+        font-size: 1.6rem;
+        margin: 0;
+
+        @include m.tablet { 
+            padding: 0 3rem;
+        }
+    @include m.desktop { 
+        padding: 0 15rem 2rem ;
+        max-width: 66rem;
+    }
+     
+    }
+}

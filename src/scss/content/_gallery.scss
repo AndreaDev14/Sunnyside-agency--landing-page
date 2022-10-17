@@ -1,0 +1,56 @@
+@use 'general/variables' as v;
+@use 'general/mixins' as m;
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 5rem;
+
+    @include m.tablet { 
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 35rem
+    }
+
+
+    &__img {
+        background-position: center;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+
+   
+  
+    }
+
+    &__img--one{
+      
+        background-image: url('../img/mobile/image-gallery-milkbottles.jpg');
+        @include m.tablet { 
+            background-image: url('../img/desktop/image-gallery-milkbottles.jpg');
+            background-position: bottom;
+        }
+    }
+    &__img--two{
+     
+        background-image: url('../img/mobile/image-gallery-orange.jpg');
+        @include m.tablet { 
+            background-image: url('../img/desktop/image-gallery-orange.jpg');
+        }
+    }
+    &__img--three{
+        
+        background-image: url('../img/mobile/image-gallery-cone.jpg');
+        @include m.tablet { 
+            background-image: url('../img/desktop/image-gallery-cone.jpg');
+            background-position: bottom;
+        }
+    }
+    &__img--four{
+      
+        background-image: url('../img/mobile/image-gallery-sugar-cubes.jpg');
+        @include m.tablet { 
+            background-image: url('../img/desktop/image-gallery-sugarcubes.jpg');
+        }
+    }
+}

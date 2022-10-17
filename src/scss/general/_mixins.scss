@@ -1,0 +1,47 @@
+@use 'variables' as v; 
+
+/** Media Queries **/
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+
+@mixin btnStyle($bgColor) {
+    font-family: v.$fontTwo;
+    color: v.$Very-dark-desaturated-blue;
+    font-family: v.$fontTwo;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+  
+
+    &::after{
+     
+        border-radius: 2rem;
+        bottom: 0;
+        content: " ";
+        display: block;
+        height: 0.8rem;
+        position: absolute;
+        width: 33%;
+        z-index: -1;
+        opacity: .5;
+        background-color: $bgColor;
+    }
+
+    
+}
+
+
+
